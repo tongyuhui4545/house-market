@@ -11,6 +11,7 @@ import { setDoc, doc, serverTimestamp } from "firebase/firestore";
 import { db, app } from "../firebase.config";
 import { toast } from "react-toastify";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
+import OAuth from "../components/OAuth";
 import visibilityIcon from "../assets/svg/visibilityIcon.svg";
 
 const SignUp = () => {
@@ -114,7 +115,7 @@ const SignUp = () => {
           </div>
         </form>
 
-        {/* google OAuth */}
+        <OAuth></OAuth>
 
         <Link to="/sign-in" className="registerLink">
           Sign In Instead
